@@ -429,8 +429,7 @@ prediction in real time.
 
         st.markdown("""
         <div style="
-         background:linear-gradient(135deg,#1B4F72,#2E86C1);
-        color:white;
+        background:white;
         padding:25px;
         border-radius:18px;
         box-shadow:0px 8px 20px rgba(0,0,0,.15);
