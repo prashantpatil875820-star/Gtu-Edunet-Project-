@@ -1,0 +1,5 @@
+*.zip
+forest-fire-dataset.zip
+__pycache__/
+.env
+venv/
