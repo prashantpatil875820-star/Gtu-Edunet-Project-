@@ -370,7 +370,19 @@ if page == "🏠 Home":
 
     # ================= DASHBOARD =================
 
-    st.subheader("System Overview")
+    st.markdown("""
+<h2 style="
+text-align:center;
+background:linear-gradient(90deg,#1B4F72,#2E86C1);
+color:white;
+padding:15px;
+border-radius:12px;
+margin-bottom:25px;
+box-shadow:0 6px 15px rgba(0,0,0,.15);
+">
+System Overview
+</h2>
+""", unsafe_allow_html=True)
 
     c1, c2, c3, c4 = st.columns(4)
 
