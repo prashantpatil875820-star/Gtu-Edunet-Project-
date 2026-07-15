@@ -196,31 +196,6 @@ hr{
 }
 
 
-/* Metric Cards */
-
-[data-testid="metric-container"]{
-    background:#FFE8D6 !important;
-    border:2px solid #FFD2B5;
-    border-radius:18px;
-    padding:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
-
-[data-testid="metric-container"]:hover{
-    background:#FFD8B0 !important;
-    transform:translateY(-5px);
-}
-
-[data-testid="metric-container"] label{
-    color:#8A4B08 !important;
-    font-weight:600;
-}
-
-[data-testid="metric-container"] [data-testid="stMetricValue"]{
-    color:#8A4B08 !important;
-    font-size:30px;
-    font-weight:bold;
-}
 </style>
 """, unsafe_allow_html=True)
 
