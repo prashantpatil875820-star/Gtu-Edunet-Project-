@@ -706,10 +706,6 @@ and live satellite imagery.
 
 Satellite Forest Fire Dataset
 
-### Author
-
-**Prashant Patil**
-
 """)
 
     st.markdown("---")
