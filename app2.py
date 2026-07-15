@@ -337,6 +337,7 @@ page = st.sidebar.radio(
 # ============================================================
 
 if page == "🏠 Home":
+    
 st.markdown("""
 <div style="
 background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
