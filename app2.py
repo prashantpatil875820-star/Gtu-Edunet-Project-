@@ -195,6 +195,32 @@ hr{
     background:linear-gradient(to right,#ff9800,#ff5722);
 }
 
+
+/* Metric Cards */
+
+[data-testid="metric-container"]{
+    background:#FFE8D6 !important;
+    border:2px solid #FFD2B5;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+[data-testid="metric-container"]:hover{
+    background:#FFD8B0 !important;
+    transform:translateY(-5px);
+}
+
+[data-testid="metric-container"] label{
+    color:#8A4B08 !important;
+    font-weight:600;
+}
+
+[data-testid="metric-container"] [data-testid="stMetricValue"]{
+    color:#8A4B08 !important;
+    font-size:30px;
+    font-weight:bold;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -386,66 +412,10 @@ System Overview
 
     c1, c2, c3, c4 = st.columns(4)
 
-    with c1:
-    st.markdown("""
-    <div style="
-    background:#FFE5D0;
-    color:#8A4B08;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    border:1px solid #FFD2B5;
-    ">
-    <h4>AI Model</h4>
-    <h2>CNN</h2>
-    </div>
-    """, unsafe_allow_html=True)
-
-   with c2:
-    st.markdown("""
-    <div style="
-    background:#FFE5D0;
-    color:#8A4B08;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    border:1px solid #FFD2B5;
-    ">
-    <h4>Satellite Source</h4>
-    <h2>NASA GIBS</h2>
-    </div>
-    """, unsafe_allow_html=True)
-
-   with c3:
-    st.markdown("""
-    <div style="
-    background:#FFE5D0;
-    color:#8A4B08;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    border:1px solid #FFD2B5;
-    ">
-    <h4>Weather API</h4>
-    <h2>OpenWeather</h2>
-    </div>
-    """, unsafe_allow_html=True)
-
-       with c4:
-    st.markdown("""
-    <div style="
-    background:#FFE5D0;
-    color:#8A4B08;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    border:1px solid #FFD2B5;
-    ">
-    <h4>Model Accuracy</h4>
-    <h2>94.21%</h2>
-    </div>
-    """, unsafe_allow_html=True)
-
+    c1.metric("🤖 Model", "CNN")
+    c2.metric("📡 Satellite", "NASA GIBS")
+    c3.metric("🌍 Weather", "OpenWeather")
+    c4.metric("🎯 Accuracy", "94.21%")
 
     st.markdown("---")
 
