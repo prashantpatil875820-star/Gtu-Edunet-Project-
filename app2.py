@@ -708,7 +708,7 @@ Satellite Forest Fire Dataset
 
 ### Author
 
-**Devendra Patil**
+**Prashant Patil**
 
 """)
 
