@@ -339,51 +339,21 @@ page = st.sidebar.radio(
 
 if page == "🏠 Home":
 
-    # ================= HERO SECTION =================
+    st.markdown(
+        """
+        <div class="title">
+            🔥 Forest Fire Risk Prediction System
+        </div>
 
-    st.markdown("""
-    <div style="
-        background:linear-gradient(135deg,#0F2027,#203A43,#2C5364);
-        padding:40px;
-        border-radius:20px;
-        color:white;
-        text-align:center;
-        box-shadow:0px 8px 25px rgba(0,0,0,0.2);
-        margin-bottom:25px;
-    ">
-
-    <h1 style="font-size:42px;margin-bottom:10px;">
-    Forest Fire Prediction System
-    </h1>
-
-    <h3 style="font-weight:400;color:#D6EAF8;">
-    AI-Based Forest Fire Risk Detection using Deep Learning
-    </h3>
-
-    <p style="font-size:17px;margin-top:20px;">
-    CNN Model | NASA GIBS | NASA FIRMS | OpenWeather API
-    </p>
-
-    </div>
-    """, unsafe_allow_html=True)
+        <div class="subtitle">
+            AI Powered Forest Fire Detection using CNN, NASA GIBS &
+            OpenWeather API
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     st.write("")
-
-    # ================= DASHBOARD =================
-
-    st.markdown("""
-<h2 style="
-text-align:center;
-background:linear-gradient(90deg,#1B4F72,#2E86C1);
-color:white;
-padding:15px;
-border-radius:12px;
-margin-bottom:25px;
-box-shadow:0 6px 15px rgba(0,0,0,.15);
-">
-System Overview
-</h2>
-""", unsafe_allow_html=True)
 
     c1, c2, c3, c4 = st.columns(4)
 
@@ -398,89 +368,77 @@ System Overview
 
     with left:
 
-        st.subheader("Project Overview")
+        st.subheader("🌲 Project Overview")
 
         st.write("""
-The Forest Fire Prediction System is an AI-powered application developed
-to identify potential forest fire risk using deep learning techniques
-and live satellite imagery.
 
-The system combines satellite images, weather conditions and a trained
-Convolutional Neural Network (CNN) model to provide reliable fire risk
-prediction in real time.
+This application predicts forest fire risk using a Deep Learning CNN model.
 
-### Key Features
+### Main Features
 
-• Forest Image Classification
+✅ Forest Image Prediction
 
-• Live Satellite Image Analysis
+✅ Live Satellite Prediction
 
-• Real-Time Weather Information
+✅ Weather Information
 
-• NASA FIRMS Hotspot Detection
+✅ NASA FIRMS Fire Hotspots
 
-• Confidence Score Generation
+✅ OpenWeather API
 
-• Fire Risk Prediction
+✅ Confidence Score
 
-• Prediction Report Download
+✅ Fire Risk Indicator
+
+✅ Modern Dashboard
+
         """)
 
     with right:
 
-        st.markdown("""
-        <div style="
-        background:white;
-        padding:25px;
-        border-radius:18px;
-        box-shadow:0px 8px 20px rgba(0,0,0,.15);
-        ">
+        st.markdown(
+            """
+            <div class="metric-card">
 
-        <h2 style="text-align:center;color:#2C3E50;">
-        AI Fire Detection
-        </h2>
+            <h2>🔥 AI Fire Detection</h2>
 
-        <hr>
+            <h4>Satellite + Weather</h4>
 
-        <p style="text-align:justify;color:#555;line-height:1.8;">
+            <p>
+            Predict fire risk anywhere in the world using
+            live satellite imagery.
+            </p>
 
-        The application integrates Deep Learning,
-        satellite imagery and weather information
-        to estimate forest fire risk and assist
-        in environmental monitoring.
-
-        </p>
-
-        </div>
-        """, unsafe_allow_html=True)
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
     st.markdown("---")
 
-    st.subheader("System Workflow")
+    st.subheader("📌 System Workflow")
 
-    st.markdown("""
-    <div style="
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0px 5px 15px rgba(0,0,0,.1);
-    line-height:2;
-    font-size:17px;
-    ">
+    st.write("""
 
-    <b>Step 1</b> &nbsp;&nbsp; Enter Latitude and Longitude <br><br>
+1️⃣ Enter Latitude & Longitude
 
-    <b>Step 2</b> &nbsp;&nbsp; Download Live Satellite Image <br><br>
+⬇
 
-    <b>Step 3</b> &nbsp;&nbsp; Predict Forest Fire Risk using CNN <br><br>
+2️⃣ Download Live Satellite Image
 
-    <b>Step 4</b> &nbsp;&nbsp; Retrieve Current Weather Information <br><br>
+⬇
 
-    <b>Step 5</b> &nbsp;&nbsp; Display Prediction Results and Weather Dashboard
+3️⃣ CNN Predicts Fire Risk
 
-    </div>
-    """, unsafe_allow_html=True)
+⬇
 
+4️⃣ Get Current Weather
+
+⬇
+
+5️⃣ Display Fire Risk + Weather Dashboard
+
+""")
 # ============================================================
 # IMAGE PREDICTION
 # ============================================================
