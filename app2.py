@@ -32,173 +32,58 @@ OPENWEATHER_API_KEY = "bc6666ea6cf36a2bc50815e582ed4372"
 st.markdown("""
 <style>
 
-/* Main Background */
-.stApp{
-    background:linear-gradient(135deg,#eef5ff,#f9fcff);
+.main{
+    background:#f4f7fb;
 }
 
-/* Container */
 .block-container{
     padding-top:2rem;
-    padding-bottom:2rem;
 }
 
-/* Sidebar */
-section[data-testid="stSidebar"]{
-    background:linear-gradient(180deg,#0F2027,#203A43,#2C5364);
-}
-
-section[data-testid="stSidebar"] *{
-    color:white !important;
-}
-
-/* Title */
 .title{
-    font-size:48px;
-    font-weight:800;
-    text-align:center;
+    font-size:45px;
+    font-weight:bold;
     color:#ff5722;
-    text-shadow:2px 2px 8px rgba(0,0,0,.2);
-}
-
-/* Subtitle */
-.subtitle{
     text-align:center;
-    color:#555;
+}
+
+.subtitle{
     font-size:20px;
-    margin-bottom:25px;
+    color:gray;
+    text-align:center;
 }
 
-/* Metric Card */
 .metric-card{
-    background:rgba(255,255,255,.95);
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-    transition:.3s;
-    border-left:6px solid #ff5722;
+    background:white;
+    border-radius:15px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0px 4px 10px rgba(0,0,0,.15);
+    margin-bottom:15px;
 }
 
-.metric-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-}
-
-/* Weather Card */
 .weather-card{
-    background:linear-gradient(135deg,#36D1DC,#5B86E5);
-    border-radius:20px;
+    background:linear-gradient(135deg,#2193b0,#6dd5ed);
     padding:20px;
+    border-radius:20px;
     color:white;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-/* Fire Card */
 .fire-card{
     background:linear-gradient(135deg,#ff512f,#dd2476);
+    padding:20px;
     border-radius:20px;
-    padding:20px;
     color:white;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-/* Buttons */
-.stButton>button{
-    width:100%;
-    background:linear-gradient(90deg,#ff5722,#ff9800);
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    border:none;
-    border-radius:12px;
-    padding:12px;
-    transition:.3s;
-}
-
-.stButton>button:hover{
-    transform:scale(1.03);
-    background:linear-gradient(90deg,#ff9800,#ff5722);
-}
-
-/* Download Button */
-.stDownloadButton>button{
-    width:100%;
-    background:linear-gradient(90deg,#4CAF50,#2E7D32);
-    color:white;
-    font-weight:bold;
-    border-radius:12px;
-}
-
-/* File Uploader */
-[data-testid="stFileUploader"]{
-    border:2px dashed #ff9800;
-    border-radius:15px;
-    padding:20px;
-    background:white;
-}
-
-/* Number Input */
-[data-baseweb="input"]{
-    border-radius:12px;
-}
-
-/* Metric Box */
-[data-testid="metric-container"]{
-    background:white;
-    border-radius:15px;
-    padding:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-/* Progress */
-.stProgress > div > div > div{
-    background:linear-gradient(90deg,#00C853,#64DD17);
-}
-
-/* Success */
-.stSuccess{
-    border-radius:12px;
-}
-
-/* Warning */
-.stWarning{
-    border-radius:12px;
-}
-
-/* Error */
-.stError{
-    border-radius:12px;
-}
-
-/* Info */
-.stInfo{
-    border-radius:12px;
-}
-
-/* JSON */
-.stJson{
-    border-radius:15px;
-}
-
-/* Footer */
 .footer{
     text-align:center;
-    margin-top:35px;
-    color:#555;
-    font-size:15px;
+    color:gray;
+    margin-top:30px;
 }
-
-/* Horizontal Line */
-hr{
-    border:none;
-    height:2px;
-    background:linear-gradient(to right,#ff9800,#ff5722);
-}
-
 
 </style>
 """, unsafe_allow_html=True)
-
 # ============================================================
 # LOAD MODEL
 # ============================================================
