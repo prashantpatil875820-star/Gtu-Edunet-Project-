@@ -82,6 +82,163 @@ st.markdown("""
     margin-top:30px;
 }
 
+*{
+    box-sizing:border-box;
+}
+
+/* Background */
+.stApp{
+    background:linear-gradient(135deg,#f8fafc,#eef2ff);
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(135deg,#0F172A,#1E3A8A,#2563EB);
+    padding:55px;
+    border-radius:28px;
+    text-align:center;
+    color:white;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(15,23,42,0.25);
+    margin-bottom:30px;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-80px;
+    right:-60px;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:rgba(255,255,255,0.05);
+    border-radius:50%;
+    bottom:-70px;
+    left:-50px;
+}
+
+.hero h1{
+    font-size:clamp(32px,4vw,52px);
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#dbeafe;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Glass Cards */
+.feature-card,
+.ai-card,
+.workflow{
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 10px 35px rgba(15,23,42,0.08);
+}
+
+/* Hover Effect */
+.feature-card:hover,
+.ai-card:hover{
+    transform:translateY(-6px);
+    transition:0.3s;
+}
+
+/* Titles */
+.feature-title{
+    font-size:28px;
+    font-weight:700;
+    color:#0F172A;
+    margin-bottom:20px;
+}
+
+.feature-text{
+    color:#475569;
+    font-size:16px;
+    line-height:2;
+}
+
+/* AI Card */
+.ai-card{
+    text-align:center;
+}
+
+.ai-card h2{
+    color:#0F172A;
+    font-size:30px;
+}
+
+.ai-card h4{
+    color:#2563EB;
+    margin:15px 0;
+}
+
+.ai-card p{
+    color:#64748B;
+    line-height:1.8;
+}
+
+/* Workflow */
+.workflow h2{
+    text-align:center;
+    color:#0F172A;
+    margin-bottom:25px;
+}
+
+.step{
+    background:white;
+    border-left:5px solid #2563EB;
+    border-radius:14px;
+    padding:18px;
+    margin:14px 0;
+    font-size:16px;
+    font-weight:600;
+    color:#334155;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero{
+    padding:30px;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.feature-card,
+.ai-card,
+.workflow{
+    padding:20px;
+}
+
+.step{
+    font-size:14px;
+}
+
+}
+
 </style>
 """, unsafe_allow_html=True)
 # ============================================================
