@@ -339,21 +339,120 @@ page = st.sidebar.radio(
 
 if page == "🏠 Home":
 
-    st.markdown(
-        """
-        <div class="title">
-            🔥 Forest Fire Risk Prediction System
-        </div>
+    st.markdown("""
+    <style>
 
-        <div class="subtitle">
-            AI Powered Forest Fire Detection using CNN, NASA GIBS &
-            OpenWeather API
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    /* Hero Section */
+    .hero{
+        background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+        padding:45px;
+        border-radius:22px;
+        color:white;
+        text-align:center;
+        box-shadow:0px 12px 30px rgba(0,0,0,0.35);
+        margin-bottom:30px;
+    }
 
-    st.write("")
+    .hero h1{
+        font-size:46px;
+        font-weight:800;
+        margin-bottom:10px;
+    }
+
+    .hero p{
+        font-size:19px;
+        color:#e5e7eb;
+        margin-bottom:0;
+    }
+
+    /* Cards */
+    .feature-card{
+        background:white;
+        border-radius:18px;
+        padding:25px;
+        box-shadow:0 8px 25px rgba(0,0,0,.08);
+        border-left:6px solid #2563eb;
+        transition:0.3s;
+        margin-bottom:15px;
+    }
+
+    .feature-card:hover{
+        transform:translateY(-5px);
+        box-shadow:0 14px 28px rgba(0,0,0,.15);
+    }
+
+    .feature-title{
+        font-size:24px;
+        font-weight:bold;
+        color:#1f2937;
+        margin-bottom:15px;
+    }
+
+    .feature-text{
+        font-size:17px;
+        color:#4b5563;
+        line-height:1.8;
+    }
+
+    /* AI Card */
+    .ai-card{
+        background:linear-gradient(135deg,#ef4444,#f97316);
+        color:white;
+        padding:30px;
+        border-radius:18px;
+        text-align:center;
+        box-shadow:0px 10px 25px rgba(0,0,0,.25);
+    }
+
+    .ai-card h2{
+        font-size:32px;
+        margin-bottom:10px;
+    }
+
+    .ai-card h4{
+        color:#fde68a;
+        margin-bottom:15px;
+    }
+
+    .ai-card p{
+        font-size:17px;
+        line-height:1.7;
+    }
+
+    /* Workflow */
+    .workflow{
+        background:white;
+        border-radius:18px;
+        padding:30px;
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+    }
+
+    .step{
+        background:#f8fafc;
+        padding:16px;
+        border-radius:12px;
+        margin:10px 0;
+        border-left:5px solid #2563eb;
+        font-size:18px;
+        font-weight:600;
+    }
+
+    </style>
+    """, unsafe_allow_html=True)
+
+    # ---------------- HERO ----------------
+
+    st.markdown("""
+    <div class="hero">
+        <h1>🔥 Forest Fire Risk Prediction System</h1>
+        <p>
+        AI Powered Forest Fire Detection using CNN, NASA GIBS &
+        OpenWeather API
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ---------------- METRICS ----------------
 
     c1, c2, c3, c4 = st.columns(4)
 
@@ -362,83 +461,99 @@ if page == "🏠 Home":
     c3.metric("🌍 Weather", "OpenWeather")
     c4.metric("🎯 Accuracy", "94.21%")
 
-    st.markdown("---")
+    st.markdown("<br>", unsafe_allow_html=True)
 
-    left, right = st.columns([2,1])
+    # ---------------- OVERVIEW ----------------
+
+    left, right = st.columns([2.3,1])
 
     with left:
 
-        st.subheader("🌲 Project Overview")
+        st.markdown("""
+        <div class="feature-card">
 
-        st.write("""
+        <div class="feature-title">
+        🌲 Project Overview
+        </div>
 
-This application predicts forest fire risk using a Deep Learning CNN model.
+        <div class="feature-text">
 
-### Main Features
+        This application predicts forest fire risk using a Deep Learning CNN model.
 
-✅ Forest Image Prediction
+        <br><br>
 
-✅ Live Satellite Prediction
+        ✅ Forest Image Prediction
 
-✅ Weather Information
+        ✅ Live Satellite Prediction
 
-✅ NASA FIRMS Fire Hotspots
+        ✅ Weather Information
 
-✅ OpenWeather API
+        ✅ NASA FIRMS Fire Hotspots
 
-✅ Confidence Score
+        ✅ OpenWeather API
 
-✅ Fire Risk Indicator
+        ✅ Confidence Score
 
-✅ Modern Dashboard
+        ✅ Fire Risk Indicator
 
-        """)
+        ✅ Modern Dashboard
+
+        </div>
+
+        </div>
+        """, unsafe_allow_html=True)
 
     with right:
 
-        st.markdown(
-            """
-            <div class="metric-card">
+        st.markdown("""
+        <div class="ai-card">
 
-            <h2>🔥 AI Fire Detection</h2>
+        <h2>🔥 AI Fire Detection</h2>
 
-            <h4>Satellite + Weather</h4>
+        <h4>Satellite + Weather Intelligence</h4>
 
-            <p>
-            Predict fire risk anywhere in the world using
-            live satellite imagery.
-            </p>
+        <p>
 
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+        Predict forest fire risk anywhere in the world using
+        real-time satellite imagery, weather information,
+        and a Deep Learning CNN model.
 
-    st.markdown("---")
+        </p>
 
-    st.subheader("📌 System Workflow")
+        </div>
+        """, unsafe_allow_html=True)
 
-    st.write("""
+    st.markdown("<br>", unsafe_allow_html=True)
 
-1️⃣ Enter Latitude & Longitude
+    # ---------------- WORKFLOW ----------------
 
-⬇
+    st.markdown("""
+    <div class="workflow">
 
-2️⃣ Download Live Satellite Image
+    <h2 style="text-align:center;color:#1e3a8a;">
+    📌 System Workflow
+    </h2>
 
-⬇
+    <div class="step">1️⃣ Enter Latitude & Longitude</div>
 
-3️⃣ CNN Predicts Fire Risk
+    <div style="text-align:center;font-size:28px;">⬇️</div>
 
-⬇
+    <div class="step">2️⃣ Download Live Satellite Image</div>
 
-4️⃣ Get Current Weather
+    <div style="text-align:center;font-size:28px;">⬇️</div>
 
-⬇
+    <div class="step">3️⃣ CNN Predicts Fire Risk</div>
 
-5️⃣ Display Fire Risk + Weather Dashboard
+    <div style="text-align:center;font-size:28px;">⬇️</div>
 
-""")
+    <div class="step">4️⃣ Fetch Current Weather Data</div>
+
+    <div style="text-align:center;font-size:28px;">⬇️</div>
+
+    <div class="step">5️⃣ Display Fire Risk + Weather Dashboard</div>
+
+    </div>
+    """, unsafe_allow_html=True)
 # ============================================================
 # IMAGE PREDICTION
 # ============================================================
