@@ -228,215 +228,250 @@ if page == "🏠 Home":
     st.markdown("""
     <style>
 
-    /* Hero Section */
+    /* Main Background */
+    .main{
+        background:#f5f7fb;
+    }
+
+    /* HERO */
     .hero{
-        background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-        padding:45px;
-        border-radius:22px;
+        background:linear-gradient(135deg,#0f172a,#1e40af,#2563eb);
+        border-radius:20px;
+        padding:55px 40px;
         color:white;
         text-align:center;
-        box-shadow:0px 12px 30px rgba(0,0,0,0.35);
         margin-bottom:30px;
+        box-shadow:0 12px 35px rgba(0,0,0,.18);
     }
 
     .hero h1{
-        font-size:46px;
+        font-size:42px;
         font-weight:800;
         margin-bottom:10px;
     }
 
     .hero p{
-        font-size:19px;
-        color:#e5e7eb;
-        margin-bottom:0;
-    }
-
-    /* Cards */
-    .feature-card{
-        background:white;
-        border-radius:18px;
-        padding:25px;
-        box-shadow:0 8px 25px rgba(0,0,0,.08);
-        border-left:6px solid #2563eb;
-        transition:0.3s;
-        margin-bottom:15px;
-    }
-
-    .feature-card:hover{
-        transform:translateY(-5px);
-        box-shadow:0 14px 28px rgba(0,0,0,.15);
-    }
-
-    .feature-title{
-        font-size:24px;
-        font-weight:bold;
-        color:#1f2937;
-        margin-bottom:15px;
-    }
-
-    .feature-text{
-        font-size:17px;
-        color:#4b5563;
-        line-height:1.8;
-    }
-
-    /* AI Card */
-    .ai-card{
-        background:linear-gradient(135deg,#ef4444,#f97316);
-        color:white;
-        padding:30px;
-        border-radius:18px;
-        text-align:center;
-        box-shadow:0px 10px 25px rgba(0,0,0,.25);
-    }
-
-    .ai-card h2{
-        font-size:32px;
-        margin-bottom:10px;
-    }
-
-    .ai-card h4{
-        color:#fde68a;
-        margin-bottom:15px;
-    }
-
-    .ai-card p{
-        font-size:17px;
+        font-size:18px;
+        color:#dbeafe;
+        max-width:700px;
+        margin:auto;
         line-height:1.7;
     }
 
-    /* Workflow */
-    .workflow{
+    /* Section Heading */
+
+    .section-title{
+        text-align:center;
+        font-size:30px;
+        font-weight:700;
+        color:#1e3a8a;
+        margin:20px 0;
+    }
+
+    /* Card */
+
+    .card{
         background:white;
         border-radius:18px;
+        padding:28px;
+        box-shadow:0 8px 22px rgba(0,0,0,.08);
+        transition:.3s;
+        height:100%;
+        border:1px solid #eef2ff;
+    }
+
+    .card:hover{
+        transform:translateY(-5px);
+        box-shadow:0 14px 30px rgba(0,0,0,.12);
+    }
+
+    .card h3{
+        color:#1e3a8a;
+        margin-bottom:15px;
+        font-size:24px;
+    }
+
+    .card p{
+        color:#4b5563;
+        line-height:1.8;
+        font-size:16px;
+    }
+
+    /* Highlight Card */
+
+    .highlight{
+        background:linear-gradient(135deg,#2563eb,#1d4ed8);
+        color:white;
+        border-radius:18px;
         padding:30px;
+        text-align:center;
+        box-shadow:0 10px 25px rgba(37,99,235,.35);
+    }
+
+    .highlight h2{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+
+    .highlight h4{
+        color:#bfdbfe;
+        margin-bottom:18px;
+    }
+
+    .highlight p{
+        color:white;
+        line-height:1.7;
+        font-size:16px;
+    }
+
+    /* Workflow */
+
+    .workflow{
+        background:white;
+        padding:30px;
+        border-radius:18px;
         box-shadow:0 8px 20px rgba(0,0,0,.08);
     }
 
     .step{
-        background:#f8fafc;
-        padding:16px;
-        border-radius:12px;
-        margin:10px 0;
+        background:#eff6ff;
         border-left:5px solid #2563eb;
-        font-size:18px;
+        padding:15px 18px;
+        margin:12px 0;
+        border-radius:10px;
+        font-size:17px;
         font-weight:600;
+        color:#1f2937;
+    }
+
+    .arrow{
+        text-align:center;
+        font-size:22px;
+        color:#2563eb;
     }
 
     </style>
     """, unsafe_allow_html=True)
 
-    # ---------------- HERO ----------------
+    # ---------------- HERO ---------------- #
 
     st.markdown("""
     <div class="hero">
-        <h1>🔥 Forest Fire Risk Prediction System</h1>
-        <p>
-        AI Powered Forest Fire Detection using CNN, NASA GIBS &
-        OpenWeather API
-        </p>
+
+    <h1>🌲 Forest Fire Risk Prediction System</h1>
+
+    <p>
+
+    AI-powered Forest Fire Detection using Deep Learning (CNN),
+    NASA GIBS Satellite Imagery and OpenWeather API for accurate
+    fire risk assessment and environmental monitoring.
+
+    </p>
+
     </div>
     """, unsafe_allow_html=True)
 
-    # ---------------- METRICS ----------------
+    # ---------------- Metrics ---------------- #
 
     c1, c2, c3, c4 = st.columns(4)
 
     c1.metric("🤖 Model", "CNN")
-    c2.metric("📡 Satellite", "NASA GIBS")
-    c3.metric("🌍 Weather", "OpenWeather")
+    c2.metric("🛰 Satellite", "NASA GIBS")
+    c3.metric("🌦 Weather", "OpenWeather")
     c4.metric("🎯 Accuracy", "94.21%")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # ---------------- OVERVIEW ----------------
+    # ---------------- Overview ---------------- #
 
     left, right = st.columns([2.3,1])
 
     with left:
 
         st.markdown("""
-        <div class="feature-card">
 
-        <div class="feature-title">
-        🌲 Project Overview
+        <div class="card">
+
+        <h3>📖 Project Overview</h3>
+
+        <p>
+
+        This intelligent application predicts forest fire risk using a
+        Convolutional Neural Network (CNN) combined with live satellite
+        imagery and weather information.
+
+        <br><br>
+
+        ✔ Forest Image Prediction<br>
+
+        ✔ Live Satellite Monitoring<br>
+
+        ✔ Weather Analysis<br>
+
+        ✔ NASA FIRMS Hotspots<br>
+
+        ✔ Confidence Score<br>
+
+        ✔ Fire Risk Indicator<br>
+
+        ✔ Interactive Dashboard
+
+        </p>
+
         </div>
 
-        <div class="feature-text">
-
-        This application predicts forest fire risk using a Deep Learning CNN model.
-
-        <br>
-
-        ✅ Forest Image Prediction
-
-        ✅ Live Satellite Prediction
-
-        ✅ Weather Information
-
-        ✅ NASA FIRMS Fire Hotspots
-
-        ✅ OpenWeather API
-
-        ✅ Confidence Score
-
-        ✅ Fire Risk Indicator
-
-        ✅ Modern Dashboard
-
-        </div>
-
-        </div>
         """, unsafe_allow_html=True)
 
     with right:
 
         st.markdown("""
-        <div class="ai-card">
 
-        <h2>🔥 AI Fire Detection</h2>
+        <div class="highlight">
 
-        <h4>Satellite & Weather Intelligence</h4>
+        <h2>🔥 AI Detection</h2>
+
+        <h4>Smart Environmental Intelligence</h4>
 
         <p>
 
-        Predict forest fire risk anywhere in the world using
-        real-time satellite imagery, weather information,
-        and a Deep Learning CNN model.
+        Monitor forests using real-time satellite imagery,
+        weather conditions and deep learning for fast,
+        accurate and reliable fire risk prediction.
 
         </p>
 
         </div>
+
         """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # ---------------- WORKFLOW ----------------
+    # ---------------- Workflow ---------------- #
 
     st.markdown("""
     <div class="workflow">
 
-    <h2 style="text-align:center;color:#1e3a8a;">
-    📌 System Workflow
-    </h2>
+    <div class="section-title">
+    ⚙️ Prediction Workflow
+    </div>
 
-    <div class="step">1️⃣ Enter Latitude & Longitude</div>
+    <div class="step">📍 Enter Latitude & Longitude</div>
 
-    <div style="text-align:center;font-size:28px;">⬇️</div>
+    <div class="arrow">↓</div>
 
-    <div class="step">2️⃣ Download Live Satellite Image</div>
+    <div class="step">🛰 Download Satellite Image</div>
 
-    <div style="text-align:center;font-size:28px;">⬇️</div>
+    <div class="arrow">↓</div>
 
-    <div class="step">3️⃣ CNN Predicts Fire Risk</div>
+    <div class="step">🤖 CNN Predicts Fire Risk</div>
 
-    <div style="text-align:center;font-size:28px;">⬇️</div>
+    <div class="arrow">↓</div>
 
-    <div class="step">4️⃣ Fetch Current Weather Data</div>
+    <div class="step">🌦 Fetch Weather Information</div>
 
-    <div style="text-align:center;font-size:28px;">⬇️</div>
+    <div class="arrow">↓</div>
 
-    <div class="step">5️⃣ Display Fire Risk & Weather Dashboard</div>
+    <div class="step">📊 Display Risk Level & Dashboard</div>
 
     </div>
     """, unsafe_allow_html=True)
